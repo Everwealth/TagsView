@@ -40,7 +40,7 @@ namespace TagsView
         {
             base.Initialize();
 
-            this.Button.SetImage(UIImage.FromBundle("ic_removetag").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), UIControlState.Normal);
+            //this.Button.SetImage(UIImage.FromBundle("ic_removetag").ImageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate), UIControlState.Normal);
             this.Button.VerticalAlignment = UIControlContentVerticalAlignment.Fill;
             this.Button.HorizontalAlignment = UIControlContentHorizontalAlignment.Fill;
 
