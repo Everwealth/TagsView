@@ -29,7 +29,7 @@
   </metadata>
   <files>
     <file src="src\MvxTagsView\bin\release\MvxTagListView.dll" target="lib\xamarinios10" />
-    <file src="src\TagsView\bin\release\TagsListView.dll" target="lib\xamarinios10" />
+    <file src="src\TagsView\bin\release\TagListView.dll" target="lib\xamarinios10" />
     <file src="src\TagsView\bin\release\Cirrious.FluentLayouts.Touch.dll" target="lib\xamarinios10" />
   </files>
 </package>
