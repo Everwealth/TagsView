@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Everwealth.TagsView.iOS</id>
+    <version>1.0.0</version>
+    <title>Everwealth.TagsView.iOS</title>
+    <authors>Everwealth</authors>
+    <owners>Everwealth</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Everwealth.TagsView.iOS</description>
+    <summary>Everwealth.TagsView.iOS</summary>
+    <copyright></copyright>
+    <language></language>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="src\MvxTagsView\bin\release\MvxTagListView.dll" target="lib\xamarinios10" />
+  </files>
+</package>
