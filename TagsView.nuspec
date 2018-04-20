@@ -13,7 +13,23 @@
     <language></language>
     <tags></tags>
   </metadata>
+    <dependencies>
+      <group targetFramework="Xamarin.iOS1.0">
+        <dependency id="MvvmCross" version="5.7.0" />
+        <dependency id="MvvmCross.Binding" version="5.7.0" />
+        <dependency id="MvvmCross.Core" version="5.7.0" />
+        <dependency id="MvvmCross.Platform" version="5.7.0" />
+      </group>
+    </dependencies>
+  <frameworkAssemblies>
+    <frameworkAssembly assemblyName="System.Core" targetFramework="Xamarin.iOS1.0" />
+    <frameworkAssembly assemblyName="System" targetFramework="Xamarin.iOS1.0" />
+    <frameworkAssembly assemblyName="System.Xml" targetFramework="Xamarin.iOS1.0" />
+    <frameworkAssembly assemblyName="Xamarin.iOS" targetFramework="Xamarin.iOS1.0" />
+  </frameworkAssemblies>
   <files>
     <file src="src\MvxTagsView\bin\release\MvxTagListView.dll" target="lib\xamarinios10" />
+    <file src="src\TagsView\bin\release\TagsView.dll" target="lib\xamarinios10" />
+    <file src="src\TagsView\bin\release\Cirrious.FluentLayouts.Touch.dll" target="lib\xamarinios10" />
   </files>
 </package>
