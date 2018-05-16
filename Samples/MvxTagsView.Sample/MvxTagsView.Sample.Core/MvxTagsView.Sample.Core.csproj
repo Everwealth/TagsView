@@ -4,13 +4,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wp8+wpa81;</AssetTargetFallback>
+	<SkipValidatePackageReferences>true</SkipValidatePackageReferences>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <ExternalConsole>false</ExternalConsole>
-    <Commandlineparameters></Commandlineparameters>
-    <LangVersion>Default</LangVersion>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>1701;1702;1705;NU1701</NoWarn>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>1701;1702;1705;NU1701</NoWarn>
+  </PropertyGroup>
+  
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.0.1" />
   </ItemGroup>
