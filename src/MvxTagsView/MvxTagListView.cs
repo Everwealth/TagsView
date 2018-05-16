@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Collections.Specialized;
 using MvvmCross.Binding.Attributes;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Binding.iOS.Views;
-using MvvmCross.Core.ViewModels;
-using MvvmCross.Platform.Platform;
-using MvvmCross.Platform.WeakSubscription;
+using MvvmCross.Commands;
+using MvvmCross.Platforms.Ios.Binding.Views;
+using MvvmCross.WeakSubscription;
+using MvvmCross.Logging;
 using TagsView;
+using MvvmCross;
 
 namespace MvxTagsView
 {
@@ -17,11 +18,14 @@ namespace MvxTagsView
 
         private IEnumerable<TSourceItem> _itemsSource;
         private IDisposable _subscription;
+		private readonly IMvxLog _log;
 
-        public MvxTagListView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableTagButton = true)
+		public MvxTagListView(Func<TSourceItem, string> sourceItemToStringFunc, bool enableTagButton = true)
             : base(enableTagButton)
         {
             this.CreateBindingContext();
+
+			this._log = Mvx.Resolve<IMvxLog>();
 
             this.sourceItemToStringFunc = sourceItemToStringFunc;
 
@@ -106,7 +110,7 @@ namespace MvxTagsView
                 case NotifyCollectionChangedAction.Move:
                     if (args.NewItems.Count != 1 && args.OldItems.Count != 1)
                     {
-                        MvxTrace.Warning("MvxTagListView: Move action called with more than one movement!");
+						_log.Warn("MvxTagListView: Move action called with more than one movement!");
                         break;
                     }
 

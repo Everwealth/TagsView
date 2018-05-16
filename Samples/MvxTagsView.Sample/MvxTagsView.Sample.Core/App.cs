@@ -1,8 +1,8 @@
-using MvvmCross.Platform.IoC;
+using MvvmCross.IoC;
 
 namespace MvxTagsView_Sample.Core
 {
-    public class App : MvvmCross.Core.ViewModels.MvxApplication
+    public class App : MvvmCross.ViewModels.MvxApplication
     {
         public override void Initialize()
         {
@@ -11,7 +11,7 @@ namespace MvxTagsView_Sample.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            RegisterNavigationServiceAppStart<ViewModels.FirstViewModel>();
+			RegisterAppStart<ViewModels.FirstViewModel>();
         }
     }
 }
